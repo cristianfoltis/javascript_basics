@@ -3,7 +3,7 @@
 */
 
 const petsOwners = [
-  (firstOwner = {
+  {
     name: "Andrei Mihaila",
     email: "andrei.mihaila@yahoo.com",
     phoneNumber: "0741 222 333",
@@ -12,8 +12,8 @@ const petsOwners = [
       petName: "Bobby",
       petAge: 3,
     },
-  }),
-  (secondOwner = {
+  },
+  {
     name: "Mihai Iacob",
     email: "mihai.iacob@gmail.com",
     phoneNumber: "0741 113 233",
@@ -22,8 +22,8 @@ const petsOwners = [
       petName: "Sara",
       petAge: 5,
     },
-  }),
-  (thirdOwner = {
+  },
+  {
     name: "Matei Luca",
     email: "matei.luca@yahoo.com",
     phoneNumber: "0751 534 185",
@@ -32,8 +32,8 @@ const petsOwners = [
       petName: "Hulk",
       petAge: 4,
     },
-  }),
-  (forthOwner = {
+  },
+  {
     name: "Cristina Stefanescu",
     phoneNumber: "0751 534 123",
     pet: {
@@ -41,14 +41,13 @@ const petsOwners = [
       petName: "Sena",
       petAge: 3,
     },
-  }),
+  },
 ];
 
 // returns the list of pet owners (name, email, phone number) who have pets of a certain type
-const getOwnerInfoByPetType = petsOwners.filter(
-  (owner) => owner.pet.petType === "cat"
-);
-console.log(getOwnerInfoByPetType);
+const getOwnerInfoByPetType = (petType) => {
+  petsOwners.filter((owner) => owner.pet.petType === petType);
+};
 
 //  returns the average age of all pets owned by pet owners in the list
 
